@@ -16,7 +16,7 @@
     <button> Add Note </button>
   </form>
   <div class='note_container' *ngFor='let note of anony_notes'>
-    <p> {{ note.Note }} --- {{ note.createdAt }} </p>
+    <p> {{ note.Note }} --- {{ note.createdAt | date:'fullDate' }} </p>
   </div>
 </body>
 </html>
