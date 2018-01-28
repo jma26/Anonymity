@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=\, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title> Anonymous Notes </title>
+</head>
+<body>
+  <h1> Anonymous Notes </h1>
+  <form (submit)='newNote()'>
+    <p> {{ note | json }} </p>
+    <p> {{ errors }} </p>
+    <label> Note: </label>
+    <input type='text' name='notes' [(ngModel)]='note.notes'>
+    <button> Add Note </button>
+  </form>
+  <div class='note_container' *ngFor='let note of anony_notes'>
+    <p> {{ note.Note }} --- {{ note.createdAt }} </p>
+  </div>
+</body>
+</html>
